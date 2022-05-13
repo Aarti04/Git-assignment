@@ -1,0 +1,73 @@
+<!-- <?php
+session_start();
+if(isset($_SESSION['uid']))
+{
+	header('location:SignIn.php');	
+}
+?> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="Register.css">
+</head>
+<body>
+    <div class="collapse" id="navbarNav">
+        <a class="nav-link " aria-current="page" href="hci.html"><-Back to Home</a>
+
+    </div> 
+    <div class="Register">
+        <h1>Register</h1>
+        <form action="Register.html" method="post">
+            <input type="text" name="name" id="name" placeholder="Your name">
+            <br>
+            <input type="number" name="age" id="age" placeholder="Your age">
+            <br>
+            <input type="number" name="weight" id="weight" placeholder="Your weight">
+            <br>
+            <input type="text" name="height" id="height" placeholder="Your height">
+            <br>
+            <input type="text" name="contact" id="contact" placeholder="Your contact details">
+            <br>
+            <input type="email" name="email" id="email"placeholder="Email">
+            <br>
+            <input type="password" name="password" id="pass" placeholder="Password">
+            <br>
+            <input type="password" name="re-password" id="re-pass" placeholder= "Re-Password">
+            <br>
+            <button type="submit">Submit</button>      
+        </form>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+<?php  
+if (isset($_POST['submit'])) {  
+    include('dbconnect.php');
+    extract($_POST);  
+    $host = "localhost";  
+    $username   = "root";  
+    $password   = "";  
+    $dbname     = "resume";  
+    // Create connection  
+    $conn = new mysqli($host, $username, $password, $dbname);  
+    // Check connection  
+    if ($conn->connect_error) {  
+        die("Connection failed: " . $conn->connect_error);  
+    }  
+    $sql = "INSERT INTO `register` (name,age,weight,height,contact,email,password,re-password)VALUES ('$name','$age','$weight','$height','$contact','$email','$password','$re-password')";  
+    if ($conn->query($sql) === TRUE) {  
+        header('Location: SignIn.php');  
+    } else {  
+        echo "Error: " . $sql . "<br>" . $conn->error;  
+    }  
+    $conn->close();  
+}  
+?>  -->
